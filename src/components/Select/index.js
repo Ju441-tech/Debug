@@ -33,7 +33,7 @@ const Select = ({
           {!collapsed && (
             <>
               {!titleEmpty && (
-                <li onClick={() => changeValue(null)}>
+                <li onClick={() => changeValue()}>
                   <input defaultChecked={!value} name="selected" type="radio" />{" "}
                   Toutes
                 </li>
