@@ -33,8 +33,12 @@ const Select = ({
           {!collapsed && (
             <>
               {!titleEmpty && (
-                <li onClick={() => changeValue()}>
-                  <input defaultChecked={!value} name="selected" type="radio" />{" "}
+                <li onClick={() => changeValue("Toutes")}>
+                  <input
+                    defaultChecked={"toutes" || value}
+                    name="selected"
+                    type="radio"
+                  />{" "}
                   Toutes
                 </li>
               )}

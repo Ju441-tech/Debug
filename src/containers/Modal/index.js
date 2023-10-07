@@ -27,13 +27,13 @@ const Modal = ({ opened, Content, children }) => {
 };
 
 Modal.defaultProps = {
-  opened: false,
-}
+  opened: false
+};
 
 Modal.propTypes = {
   opened: PropTypes.bool,
   Content: PropTypes.node.isRequired,
-  children: PropTypes.func.isRequired,
-}
+  children: PropTypes.func.isRequired
+};
 
 export default Modal;
