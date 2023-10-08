@@ -13,11 +13,10 @@ const EventList = () => {
   const { data, error } = useData();
   const [type, setType] = useState();
   const [currentPage, setCurrentPage] = useState(1);
-  console.log(type);
-  const essai = data?.events.filter((event) => event);
-  console.log(essai);
+
+  // Filtered a été changée pour devenir fonctionnelle :
   const filteredEvents = (
-    (!type
+    (!type || type === "Toutes"
       ? data?.events
       : data?.events.filter((event) => event.type === type)) || []
   ).filter((event, index) => {
@@ -29,7 +28,6 @@ const EventList = () => {
     }
     return false;
   });
-  console.log(filteredEvents);
   const changeType = (evtType) => {
     setCurrentPage(1);
     setType(evtType);
