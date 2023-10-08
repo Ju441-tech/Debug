@@ -4,7 +4,7 @@ import "./style.scss";
 
 export const BUTTON_TYPES = {
   DEFAULT: 1,
-  SUBMIT: 2,
+  SUBMIT: 2
 };
 
 const Button = ({ title, onClick, type, disabled, children }) => {
@@ -56,7 +56,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   type: PropTypes.number,
   disabled: PropTypes.bool,
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 Button.defaultProps = {
   disabled: false,
@@ -64,6 +64,6 @@ Button.defaultProps = {
   type: BUTTON_TYPES.DEFAULT,
   title: "",
   children: null
-}
+};
 
 export default Button;
